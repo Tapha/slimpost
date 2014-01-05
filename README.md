@@ -16,18 +16,18 @@
 - Using Type Rendering Mix JS
 - Custom fonts
 
-####Installation
+###Installation
 1. Copy theme folder into your **Ghost** installation folder: <code>/content/themes</code>.
 2. Restart **Ghost** instance.
 3. Sign in to **Admin panel**, go to **Settings → General** and select **slimpost** in themes list.
 
-####Configuration
+###Configuration
 
-#####Social links
+####Social links
 You can change links to your social profiles in <code>partials/social-links.hbs</code> file.  
 It's possible to add another social icons if you want because theme uses **Font Awesome** icons. You can check out all social icons here: <a href="http://fontawesome.io/icons/#brand" target="_blank">http://fontawesome.io/icons/#brand</a>
 
-#####Disqus comments
+####Disqus comments
 If you would like to use **Disqus** comments just change your shortname in <code>partials/disqus-shortname.hbs</code>:  
 <pre><code>{{! Disqus shortname }}
 var disqus_shortname = 'example';</code></pre>
