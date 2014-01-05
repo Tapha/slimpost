@@ -3,7 +3,7 @@
 ###Overview
 **Slimpost** is clean, minimal and responsive theme for Ghost.
 
-**Demo**: [http://slimpost-demo.apps.runkite.com](http://slimpost-demo.apps.runkite.com)
+**Demo**: [http://slimpost-ghost.infinitum.me](http://slimpost-ghost.infinitum.me)
 
 ####Features
 - Clean and minimal design
