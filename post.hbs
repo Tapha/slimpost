@@ -1,24 +1,15 @@
 {{!< default}}
 
 <div class="wrapper">
-    <header class="header">
-        <div class="logo"{{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
-            <h1>
-                <a href="{{@blog.url}}">{{@blog.title}}</a>
-            </h1>   
+    {{> header}}
 
-            <div class="blog-description">
-                <div class="through-line">{{@blog.description}}</div>       
-            </div>
-        </div>
-    </header>
     <section class="articles">
         {{#post}}
 
         <article class="{{post_class}}">
             <header class="post-header">
                 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>               
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD, YYYY"}}</time>
             </header>
             
             <section class="post-excerpt">
@@ -40,21 +31,23 @@
             
         </div>
 
+        <section class="comments">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">            
+                {{> disqus-shortname}}
+
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </section>
+
         {{/post}}
     </section>
     
-    <footer class="footer">
-        <div class="social-links-hr"></div>
-        <section class="social-links">
-            <div class="social-links-inner">
-                <a class="icon-feed" href="{{@blog.url}}/rss/" target="_blank"></a>
-                <a class="icon-twitter" href="http://twitter.com/" target="_blank"></a>
-                <a class="icon-facebook" href="http://facebook.com/" target="_blank"></a>
-                <a class="icon-google-plus" href="http://plus.google.com/" target="_blank"></a>
-            </div>			
-        </section>
-    </footer>
+    {{> footer}}
 </div>
-<aside class="poweredby">
-    <a class="icon-ghost" href="http://ghost.org" title="Proudly published with Ghost" target="_blank"></a>
-</aside>

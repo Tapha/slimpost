@@ -1,100 +1,15 @@
-/*
-    ================================================
-    Slipmost theme for Ghost
-    Created by Dmitriy S.
-    GitHub Repo: https://github.com/bzhnyau/slimpost
-    ================================================
+/*!
+   Slimpost (January 5, 2014)
+   Created by Infinitum Themes (http://infinitum.me)
 */
 
-/* Icons from original Capser theme */
+/* Import Arvo and PT Sans from Google Fonts
+---------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic-ext,latin-ext,cyrillic);
 
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'icons';
-    src:url('../fonts/icons.eot');
-    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icons.woff') format('woff'),
-        url('../fonts/icons.ttf') format('truetype'),
-        url('../fonts/icons.svg#icons') format('svg');
-}
 
-.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
-    text-decoration: none;
-    text-transform: none;
-    font-weight: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-size: 12px;
-    font-family: 'icons';
-    line-height: 1;
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-}
-
-.icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
-    padding: 7px;
-    border-radius: 15px;
-    color: #fff;
-}
-
-.icon-feed {
-    background-color: #FAB28C;
-}
-
-.icon-feed:hover {
-    background-color: #F59562;
-    color: #fff;
-}
-
-.icon-twitter {
-    background-color: #8ACEFF;
-}
-
-.icon-twitter:hover {
-    background-color: #49B2FC;
-    color: #fff;
-}
-
-.icon-google-plus {
-    background-color: #D8684D;
-}
-
-.icon-google-plus:hover {
-    background-color: #C2492F;
-    color: #FFFFFF;
-}
-
-.icon-facebook {
-    background-color: #637FBF;
-}
-
-.icon-facebook:hover {
-    background-color: #38569C;
-    color: #fff;
-}
-
-.icon-ghost:before {
-    content: "\e000";
-}
-
-.icon-feed:before {
-    content: "\e001";
-}
-
-.icon-twitter:before {
-    content: "\e002";
-    font-size: 1.1em;
-}
-
-.icon-google-plus:before {
-    content: "\e003";
-}
-
-.icon-facebook:before {
-    content: "\e004";
-}
-
+/* Main
+---------------------------------------- */
 BODY {
     background-color: #ebe8df;
 }
@@ -137,20 +52,20 @@ BLOCKQUOTE {
 }
 
 ARTICLE {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #eaeaea;
 }
 
 HR {
-    height: 11px;
+    height: 3px;
     border: none;
-    background: #fff url('../images/hr.png') no-repeat scroll center;
-    color: transparent;
+    background-color: #eaeaea;
+    width: 200px;
 }
 
 .wrapper {
-    margin: 50px auto 0 auto;
+    margin: 50px auto;
     padding: 50px 50px 40px 50px;
     width: 550px;
     background-color: #fff;
@@ -269,30 +184,14 @@ HR {
     text-align: center;
 }
 
-.poweredby {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px 0;
-    color: #888;
-    text-align: center;
-    font-size: 13px;
-    font-family: Tahoma, sans-serif;
-}
-
-.poweredby A {
-    padding: 5px;
-    background: #D9D5CC;
-    color: #888;
-}
-
 .social-links {
     margin-top: -15px;
 }
 
 .social-links-inner {
-    background: #fff;
     display: inline-block;
     padding: 0 15px;
+    background: #fff;
 }
 
 .social-links-hr {
@@ -316,8 +215,8 @@ HR {
 
 .author-bio {
     float: right;
+    width: 78%;
     font-size: 14px;
-    width: 78%
 }
 
 .author-name {
@@ -330,6 +229,133 @@ HR {
     background-color: #f7f7f7;
 }
 
+.comments {
+    margin-top: 32px;
+    padding-top: 25px;
+    border-top: 2px solid #eaeaea;
+}
+
 .clearfix {
     clear: both;
+}
+
+/* Social icons
+---------------------------------------- */
+.icon {
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.icon:hover {
+    color: #ffffff;
+}
+
+.icon-feed {    
+    background-color: #ffa366;
+}
+
+.icon-feed:hover {
+    background-color: #ff6600;
+}
+
+.icon-twitter {
+    background-color: #6eb8f0;
+}
+
+.icon-twitter:hover {
+    background-color: #3ca2f0;
+}
+
+.icon-google-plus {
+    background-color: #d46148;
+}
+
+.icon-google-plus:hover {
+    background-color: #c2492f;
+}
+
+.icon-facebook {
+    background-color: #5070ba;
+}
+
+.icon-facebook:hover {
+    background-color: #38569c;
+}
+
+.icon-dribbble {
+    background-color: #e86d9d;
+}
+
+.icon-dribbble:hover {
+    background-color: #ea4c89;
+}
+
+.icon-flickr {
+    background-color: #fa50a8;
+}
+
+.icon-flickr:hover {
+    background-color: #ff0084;
+}
+
+.icon-foursquare {
+    background-color: #5bc7de;
+}
+
+.icon-foursquare:hover {
+    background-color: #0cbadf;
+}
+
+.icon-instagram {
+    background-color: #6c9dc4;
+}
+
+.icon-instagram:hover {
+    background-color: #517fa4;
+}
+
+.icon-github {
+    background-color: #777777;
+}
+
+.icon-github:hover {
+    background-color: #222222;
+}
+
+.icon-tumblr {
+    background-color: #5a7b9c;
+}
+
+.icon-tumblr:hover {
+    background-color: #32506d;
+}
+
+.icon-pinterest {
+    background-color: #cc494f;
+}
+
+.icon-pinterest:hover {
+    background-color: #cb2027;
+}
+
+.icon-linkedin {
+    background-color: #1a99d6;
+}
+
+.icon-linkedin:hover {
+    background-color: #007bb6;
+}
+
+.icon-vk {
+    background-color: #6286b3;
+}
+
+.icon-vk:hover {
+    background-color: #45668e;
 }
